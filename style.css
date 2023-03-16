@@ -72,3 +72,9 @@ body {
     width: 50%;
     border-radius: inherit;
 }
+
+button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
