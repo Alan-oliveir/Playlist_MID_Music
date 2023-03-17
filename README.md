@@ -12,6 +12,9 @@ Toca as músicas armazenadas na pasta songs.
 - HTML
 - CSS
 
+## Site
+[GitHub Pages](https://alan-oliveir.github.io/Playlist_MID_Music)
+
 ## Autor
 
 Alan de Oliveira Gonçalves
