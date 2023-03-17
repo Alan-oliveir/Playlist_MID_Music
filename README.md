@@ -2,6 +2,8 @@
 
 É uma playlist inspirada no spotify.
 
+Toca as músicas armazenadas a pasta songs.
+
 ## Layout 
 ![Windows](https://github.com/Alan-oliveir/Playlist_MID_Music/blob/main/Screenshot/playlist.jpg)
 
