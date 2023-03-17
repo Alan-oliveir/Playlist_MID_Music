@@ -13,7 +13,7 @@ Toca as músicas armazenadas na pasta songs.
 - CSS
 
 ## Site
-![Página](https://alan-oliveir.github.io/Playlist_MID_Music/)
+[Playlist MID Music](https://alan-oliveir.github.io/Playlist_MID_Music/)
 
 ## Autor
 
