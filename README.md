@@ -2,7 +2,7 @@
 
 É uma playlist inspirada no spotify.
 
-Toca as músicas armazenadas a pasta songs.
+Toca as músicas armazenadas na pasta songs.
 
 ## Layout 
 ![Windows](https://github.com/Alan-oliveir/Playlist_MID_Music/blob/main/Screenshot/playlist.jpg)
@@ -12,7 +12,7 @@ Toca as músicas armazenadas a pasta songs.
 - HTML
 - CSS
 
-## Como executar o projeto
+## Site
 
 ## Autor
 
