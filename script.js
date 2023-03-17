@@ -37,7 +37,7 @@ const cantHide = {
 let isPlaying = false;
 let isShuffled = false;
 let repeatOn = false;
-const originalPlaylist = JSON.parse(localStorage.getItem('playlist')) ?? [asYouWere, boomBapFlick, cant_hide];
+const originalPlaylist = JSON.parse(localStorage.getItem('playlist')) ?? [asYouWere, boomBapFlick, cantHide];
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
 
