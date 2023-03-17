@@ -1,6 +1,6 @@
-# Playlist MID Music
+# Sobre
 
-É uma playlist inspirada no spotify.
+Playlist MID Music é uma playlist inspirada no spotify.
 
 Toca as músicas armazenadas na pasta songs.
 
