@@ -15,8 +15,9 @@ Toca as músicas armazenadas na pasta songs.
 ## Site
 [GitHub Pages](https://alan-oliveir.github.io/Playlist_MID_Music)
 
-## Autor
+## Agredecimentos
+- Hashtag Programação: Curso básico de JavaScript.
 
-Alan de Oliveira Gonçalves
+## Redes Sociais 
 
-[Linkedin](www.linkedin.com/in/alan-de-oliveira-gonçalves-207549258)
+Alan de Oliveira Gonçalves - [Linkedin](www.linkedin.com/in/alan-de-oliveira-gonçalves-207549258)
