@@ -5,33 +5,39 @@ const cover = document.getElementById('cover');
 const play = document.getElementById('play');
 const next = document.getElementById('next');
 const previous = document.getElementById('previous');
+const likeButton = document.getElementById('like');
 const currentProgress = document.getElementById('current-progress');
 const progressContainer = document.getElementById('progress-container');
 const shuffleButton = document.getElementById('shuffle');
 const repeatButton = document.getElementById('repeat');
+const songTime = document.getElementById('song-time');
+const totalTime = document.getElementById('total-time');
 
 const asYouWere = {
     songName: 'As You Were',
     artist: 'Track Tribe',
-    file: 'as_you_were'
+    file: 'as_you_were',
+    liked: false
 };
 
 const boomBapFlick = {
     songName: 'Boom Bap Flick',
     artist: 'Quincas Moreira',
-    file: 'boom_bap_flick'
+    file: 'boom_bap_flick',
+    liked: false
 };
 
 const cantHide = {
     songName: "Can't Hide",
     artist: 'Otis McDonald',
-    file: 'cant_hide'
+    file: 'cant_hide',
+    liked: false
 };
 
 let isPlaying = false;
 let isShuffled = false;
 let repeatOn = false;
-const originalPlaylist = [asYouWere, boomBapFlick, cantHide];
+const originalPlaylist = JSON.parse(localStorage.getItem('playlist')) ?? [asYouWere, boomBapFlick, cant_hide];
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
 
@@ -58,11 +64,25 @@ function playPauseDecider() {
     }
 }
 
+function likeButtonRender() {
+    if(sortedPlaylist[index].liked === true) {
+        likeButton.querySelector('.bi').classList.remove('bi-heart');
+        likeButton.querySelector('.bi').classList.add('bi-heart-fill');
+        likeButton.classList.add('button-active');
+    }
+    else {
+        likeButton.querySelector('.bi').classList.add('bi-heart');
+        likeButton.querySelector('.bi').classList.remove('bi-heart-fill');
+        likeButton.classList.remove('button-active');
+    }
+}
+
 function initializeSong() {
     cover.src = `images/${sortedPlaylist[index].file}.webp`;
     song.src = `songs/${sortedPlaylist[index].file}.mp3`;
     songName.innerText = sortedPlaylist[index].songName; 
     bandName.innerText = sortedPlaylist[index].artist;
+    likeButtonRender();
 }
 
 function previousSong() {
@@ -87,16 +107,17 @@ function nextSong() {
     playSong();   
 }
 
-function updateProgressBar() {
+function updateProgress() {
     const barWidth = (song.currentTime/song.duration)*100;
     currentProgress.style.setProperty('--progress', `${barWidth}%`);
+    songTime.innerText = toHHMMSS(song.currentTime);
 }
 
 function jumpTo(event) {
     const width = progressContainer.clientWidth;
     const clickPosition = event.offsetX;
     const jumpToTime = (clickPosition/width)*song.duration;
-    song.currentTime = jumpToTime;
+    song.currentTime = jumpToTime;    
 }
 
 function shuffleArray(preShuffleArray) {
@@ -133,7 +154,6 @@ function repeatButtonClicked() {
         repeatOn = false;
         repeatButton.classList.remove('button-active');
     }
-
 }
 
 function nextOrRepeat() {
@@ -145,13 +165,37 @@ function nextOrRepeat() {
     }
 }
 
+function toHHMMSS(originalNumber) {
+    let hours = Math.floor(originalNumber/3600);
+    let minutes = Math.floor((originalNumber - hours*3600)/60);
+    let seconds = Math.floor(originalNumber - hours*3600 - minutes*60);
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+function updateTotalTime() {    
+    totalTime.innerText = toHHMMSS(song.duration);
+}
+
+function likeButtonClicked() {
+    if(sortedPlaylist[index].liked === false) {
+        sortedPlaylist[index].liked = true;
+    }
+    else {
+        sortedPlaylist[index].liked = false;
+    }
+    likeButtonRender();
+    localStorage.setItem('playlist', JSON.stringify(originalPlaylist));
+}
+
 initializeSong();
 
 play.addEventListener('click', playPauseDecider);
 previous.addEventListener('click', previousSong);
 next.addEventListener('click', nextSong);
-song.addEventListener('timeupdate', updateProgressBar);
-song.addEventListener('ended', nextOrRepeat)
+song.addEventListener('timeupdate', updateProgress);
+song.addEventListener('ended', nextOrRepeat);
+song.addEventListener('loadedmetadata', updateTotalTime);
 progressContainer.addEventListener('click', jumpTo);
-shuffleButton.addEventListener('click', shuffleButtonClicked)
-repeatButton.addEventListener('click', repeatButtonClicked)
+shuffleButton.addEventListener('click', shuffleButtonClicked);
+repeatButton.addEventListener('click', repeatButtonClicked);
+likeButton.addEventListener('click', likeButtonClicked);
