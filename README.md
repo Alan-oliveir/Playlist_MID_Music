@@ -7,14 +7,14 @@ Toca as músicas armazenadas a pasta songs.
 ## Layout 
 ![Windows](https://github.com/Alan-oliveir/Playlist_MID_Music/blob/main/Screenshot/playlist.jpg)
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas
 - JavaScript
 - HTML
 - CSS
 
-# Como executar o projeto
+## Como executar o projeto
 
-# Autor
+## Autor
 
 Alan de Oliveira Gonçalves
 
