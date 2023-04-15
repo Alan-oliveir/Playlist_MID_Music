@@ -20,4 +20,4 @@ Toca as músicas armazenadas na pasta songs.
 
 ## Redes Sociais 
 
-Alan de Oliveira Gonçalves - [Linkedin](www.linkedin.com/in/alan-de-oliveira-gonçalves-207549258)
+Alan de Oliveira Gonçalves - Linkedin: www.linkedin.com/in/alan-de-oliveira-gonçalves-207549258
