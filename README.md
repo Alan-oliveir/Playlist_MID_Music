@@ -13,9 +13,9 @@ Toca as músicas armazenadas na pasta songs.
 - CSS
 
 ## Site
-[GitHub Pages](https://alan-oliveir.github.io/Playlist_MID_Music)
+[Playlist_MID_Music](https://alan-oliveir.github.io/Playlist_MID_Music)
 
-## Agredecimentos
+## Agradecimentos
 - Hashtag Programação: Curso básico de JavaScript.
 
 ## Redes Sociais 
