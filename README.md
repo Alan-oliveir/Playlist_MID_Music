@@ -18,6 +18,7 @@ Toca as músicas armazenadas na pasta songs.
 ## Agradecimentos
 - Hashtag Programação: Curso básico de JavaScript.
 
-## Redes Sociais 
+---   
 
-Alan de Oliveira Gonçalves - Linkedin: www.linkedin.com/in/alan-de-oliveira-gonçalves-207549258
+### Contato:  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alan-ogoncalves)
